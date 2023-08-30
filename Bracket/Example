@@ -1,0 +1,73 @@
+local Bracket = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlexR32/Bracket/main/BracketV32.lua"))()
+Bracket:Notification() Bracket:Notification2()
+
+local Window = Bracket:Window({Name = "cheathook",Enabled = true,Color = Color3.new(1,0.5,0.25),Size = UDim2.new(0,496,0,496),Position = UDim2.new(0.5,-248,0.5,-248)}) 
+
+-- tabs
+local AT = Window:Tab({Name = "Aimbot"})
+local VT = Window:Tab({Name = "Visuals"})
+local MT = Window:Tab({Name = "Misc"})
+local ST = Window:Tab({Name = "Settings"})
+
+-- aimbot tab
+local AA = AT:Section({Name = "Aim Assist",Side = "Left"})
+
+local AAL = AA:Label({Text = "Use at your own risk!",Side = "Left"})
+
+local AAToggle = AA:Toggle({Name = "Enable",Side = "Left",Value = true,Callback = function(value)
+    print(value)
+end})
+
+local HCS = AA:Slider({Name = "Hitchance",Side = "Left",Min = 0,Max = 100,Value = 50,Precise = 1,Unit = "%",Callback = function(Number)end})
+
+local GMB = AA:Button({Name = "No Recoil",Side = "Left",Callback = function()
+
+end})
+
+local AATC = AA:Toggle({Name = "Team Check",Side = "Left",Value = false,Callback = function(value)
+    print(value)
+end})
+
+local AAPT = AA:Textbox({Name = "Prioritize",Side = "Left", Text = "Text",Placeholder = "username",NumberOnly = false,Callback = function(String)
+
+end})
+
+local FT = AT:Section({Name = "FOV Circle",Side = "Right"})
+local FTT = FT:Toggle({Name = "Enable",Side = "Left",Value = true,Callback = function(value)
+    print(value)
+end})
+
+local FCR = FT:Slider({Name = "Radius",Side = "Left",Min = 0,Max = 360,Value = 90,Precise = 1,Unit = "%",Callback = function(Number)end})
+local FCS = FT:Slider({Name = "Sides",Side = "Left",Min = 0,Max = 120,Value = 90,Precise = 1,Unit = "x",Callback = function(Number)end})
+
+
+-- visuals tab
+local PE = VT:Section({Name = "Player ESP",Side = "Left"})
+PE:Toggle({Name = "Enable",Side = "Left",Value = true,Callback = function(value)
+    print(value)
+end})
+
+local NESP = PE:Toggle({Name = "Name ESP",Side = "Left",Value = false,Callback = function(value)
+    print(value)
+end})
+PE:Colorpicker({Name = "Name color",Side = "Left",Color = Color3.new(1,0,0),Callback = function(Color)
+end})
+
+
+local BESP = PE:Toggle({Name = "Box ESP",Side = "Left",Value = false,Callback = function(value)
+    print(value)
+end})
+PE:Colorpicker({Name = "Box color",Side = "Left",Color = Color3.new(1,0,0),Callback = function(Color)
+end})
+
+local HESP = PE:Toggle({Name = "Health bar",Side = "Left",Value = false,Callback = function(value)
+    print(value)
+end})
+PE:Colorpicker({Name = "Health bar color",Side = "Left",Color = Color3.new(1,0,0),Callback = function(Color)
+end})
+
+local HTESP = PE:Toggle({Name = "Health text",Side = "Left",Value = false,Callback = function(value)
+    print(value)
+end})
+PE:Colorpicker({Name = "Health text color",Side = "Left",Color = Color3.new(1,0,0),Callback = function(Color)
+end})
