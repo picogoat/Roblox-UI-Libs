@@ -1,0 +1,62 @@
+local lib = loadstring(game:HttpGet('https://raw.githubusercontent.com/TheoTheEpic/AquaLib/main/AquaLib.lua'))()
+
+local window = lib.createWindow("Penis Hub", "Penis Hub", true)
+
+-- tabs
+local AT = window.createTab("Aimbot")
+local VT = window.createTab("Visuals")
+
+-- Aimbot tab
+local section1 = AT.createSection("Silent Aim", true)
+section1.createToggle("Enable", false, function(value)
+	print(value)
+end)
+
+section1.createDropdown("Hitpart", {"Head", "Torso", "Arm", "Leg"}, "Head", function(value)
+	print(value)
+end)
+
+section1.createDropdown("Hit priority", {"Distance", "Crosshair", "Random"}, "Crosshair", function(value)
+	print(value)
+end)
+
+section1.createSlider("Hit chance", {defualt = 50, max = 100, min = 0}, function(value)
+	print(value)
+end)
+
+section1.createButton("No Recoil", function()
+	print("Button Pressed!")
+end)
+
+section1.createButton("Gun Mod", function() 
+	window.notification("Gun Mod enabled", "gun mod enabled")
+end)
+
+section1.createText("End of silent aim")
+
+-- Visuals tab
+local sec2 = VT.createSection("Player ESP", true)
+
+sec2.createToggle("Enable", true, function(value)
+	print(value)
+end)
+
+sec2.createToggle("Names", false, function(value)
+	print(value)
+end)
+
+sec2.createToggle("Boxes", true, function(value)
+	print(value)
+end)
+
+sec2.createToggle("Healthbar", false, function(value)
+	print(value)
+end)
+
+sec2.createToggle("Distance", false, function(value)
+	print(value)
+end)
+
+sec2.createSlider("Max distance", {defualt = 1000, max = 5000, min = 1}, function(value)
+	print(value)
+end)
