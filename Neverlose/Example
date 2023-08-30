@@ -1,0 +1,160 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostDuckyy/UI-Libraries/main/Neverlose/source.lua"))()
+
+
+-- window
+local Window = Library:Window({
+    text = "Neverblox"
+})
+
+-- Legit Section
+local LegitSection = Window:TabSection({
+    text = "Aimbot"
+})
+
+-- Legit Tab 1
+local LB = LegitSection:Tab({
+    text = "Legitbot",
+    icon = "rbxassetid://7999345313",
+})
+
+local Main = LB:Section({
+    text = "Main"
+})
+
+Main:Toggle({
+    text = "Enable Legitbot",
+    state = false, -- Default boolean
+    callback = function(boolean)
+
+    end
+})
+
+Main:Dropdown({
+    text = "Activation",
+    list = {"Hotkey", "Always"},
+    default = "Hotkey",
+    callback = function(String)
+        print(String)
+    end
+})
+
+Main:Dropdown({
+    text = "Hotkey",
+    list = {"MB1", "MB2","E"},
+    default = "MB1",
+    callback = function(String)
+        print(String)
+    end
+})
+
+Main:Dropdown({
+    text = "Disable Aimbot if",
+    list = {"Select", "Flashed", "Smoked", "Jumping"},
+    default = "Select",
+    callback = function(String)
+        print(String)
+    end
+})
+
+Main:Slider({
+    text = "Backtracking",
+    min = 1,
+    max = 200,
+    callback = function(number)
+        print(number)
+    end
+})
+
+Main:Toggle({
+    text = "Draw FOV",
+    state = false, -- Default boolean
+    callback = function(boolean)
+        print("Toggle current: ",boolean)
+    end
+})
+
+Main:Colorpicker({
+    text = "FOV Color",
+    color = Color3.new(1,1,1),
+    callback = function(HSV)
+        print(HSV)
+    end
+})
+
+
+
+local FB = LB:Section({
+    text = "First Bullet"
+})
+
+FB:Toggle({
+    text = "Enable First Bullet",
+    state = false, -- Default boolean
+    callback = function(boolean)
+        print("Toggle current: ",boolean)
+    end
+})
+
+FB:Textbox({
+    text = "FOV",
+    value = "69",
+    callback = function(String)
+        print(String)
+    end
+})
+
+FB:Textbox({
+    text = "Smooth",
+    value = "10",
+    callback = function(String)
+        print(String)
+    end
+})
+
+-- Legit tab 2
+local RB = LegitSection:Tab({
+    text = "Ragebot",
+    icon = "rbxassetid://7999345313",
+})
+
+-- Legit tab 3
+local AA = LegitSection:Tab({
+    text = "Anti Aim",
+    icon = "rbxassetid://7999345313",
+})
+
+
+-- Visuals Section
+local VisualSection = Window:TabSection({
+    text = "Visuals"
+})
+
+local PL = VisualSection:Tab({
+    text = "Players",
+    icon = "rbxassetid://7999345313",
+})
+
+local WE = VisualSection:Tab({
+    text = "Weapon",
+    icon = "rbxassetid://7999345313",
+})
+
+local WO = VisualSection:Tab({
+    text = "World",
+    icon = "rbxassetid://7999345313",
+})
+
+-- Miscellaneous Section
+local Misc = Window:TabSection({
+    text = "Miscellaneous"
+})
+
+local MA = Misc:Tab({
+    text = "Main",
+    icon = "rbxassetid://7999345313",
+})
+
+local IN = Misc:Tab({
+    text = "Inventory",
+    icon = "rbxassetid://7999345313",
+})
