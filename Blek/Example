@@ -1,0 +1,37 @@
+local BlekLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/laderite/bleklib/main/library.lua"))()
+
+local win = BlekLib:Create({
+    Name = "pookiehack",
+    StartupSound = {
+        Toggle = false,
+        SoundID = "rbxassetid://6958727243",
+        TimePosition = 1
+    }
+})
+
+local maintab = win:Tab('Aimbot')
+local uitab = win:Tab('UI')
+
+maintab:Toggle('Aimbot', function(v)
+    aimbot = v
+end)
+
+maintab:Slider('Hitchance', 30, 1, 100, function(v) -- default, 10 -- min, 300 -- max, function(a)
+    print(v)
+end)
+
+maintab:Toggle('FOV Circle', function(v)
+    aimbot = v
+end)
+
+maintab:Slider('Radius', 90, 1, 360, function(v) -- default, 10 -- min, 300 -- max, function(a)
+    print(v)
+end)
+
+maintab:Label('Best aimbot on the market!')
+
+
+uitab:Button('Destroy GUI', function()
+    win:Exit()
+end)
+
