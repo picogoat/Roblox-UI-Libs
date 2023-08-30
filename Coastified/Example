@@ -1,0 +1,51 @@
+local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/coastified/src.lua"))()
+local Window = Lib:Window("coastified", "Tabs", Enum.KeyCode.Delete)
+
+local Test = Window:Tab("Silent Aim")
+
+Test:Toggle('Enabled',function(state)
+    print(state)
+end)
+
+Test:Slider('Fov Size',1,200,75,function(Value)
+    print(Value)
+end)
+
+Test:Colorpicker("Color",Color3.fromRGB(0,0,0), function(color)
+    print(color)
+end)
+
+Test:Dropdown("Aim Part",{'Head',"UpperTorso","HumanoidRootPart","LowerTorso"}, function(objective)
+    print(objective)
+end)
+
+Test:Dropdown("Aim Priority",{'Crosshair',"Distance"}, function(objective)
+    print(objective)
+end)
+
+local Test2 = Window:Tab("Player ESP")
+Test2:Toggle('Enabled',function(state)
+    print(state)
+end)
+
+Test2:Toggle('Name ESP',function(state)
+    print(state)
+end)
+
+Test2:Toggle('Box ESP',function(state)
+    print(state)
+end)
+
+Test2:Toggle('Health Bar',function(state)
+    print(state)
+end)
+
+Test2:Toggle('Health Text',function(state)
+    print(state)
+end)
+
+Test2:Label('Settings')
+
+Test2:Toggle('Team Check',function(state)
+    print(state)
+end)
