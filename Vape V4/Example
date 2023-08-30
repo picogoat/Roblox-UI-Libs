@@ -1,0 +1,122 @@
+local lib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/Vape.txt")()
+
+--winmdow
+local win = lib:Window("duckhaxx",Color3.fromRGB(44, 120, 224), Enum.KeyCode.Delete)
+
+--tabs
+local mt = win:Tab("main")
+local et = win:Tab("esp")
+local st = win:Tab("settings")
+
+--main tab
+mt:Label(" - silent aim")
+mt:Toggle("enable",false, function(bool)
+    print(bool)
+end)
+
+mt:Slider("hitchance",0,100,50, function(v)
+    print(v)
+end)
+
+mt:Toggle("team check",false, function(bool)
+    print(bool)
+end)
+
+mt:Toggle("visible check",false, function(bool)
+    print(bool)
+end)
+
+mt:Slider("max distance",0,5000,1000, function(v)
+    print(v)
+end)
+
+mt:Label(" - fov circle")
+
+mt:Toggle("enable",false, function(bool)
+    print(bool)
+end)
+mt:Colorpicker("fov circle color",Color3.fromRGB(255,255,255), function(clr)
+    print(clr)
+end)
+    
+
+mt:Slider("fov radius",0,360,90, function(v)
+    print(v)
+end)
+
+mt:Slider("fov numsides",0,90,60, function(v)
+    print(v)
+end)
+
+mt:Toggle("outline",false, function(bool)
+    print(bool)
+end)
+mt:Colorpicker("fov outline color",Color3.fromRGB(0,0,0), function(t)
+    print(t)
+end)
+    
+
+--visuals tab
+et:Label(" - player esp")
+et:Toggle("enable",false, function(bool)
+    print(bool)
+end)
+
+et:Toggle("names",false, function(bool)
+    print(bool)
+end)
+
+et:Toggle("boxes",false, function(bool)
+    print(bool)
+end)
+
+et:Toggle("healthbar",false, function(bool)
+    print(bool)
+end)
+
+et:Toggle("distance",false, function(bool)
+    print(bool)
+end)
+
+et:Toggle("tracers",false, function(bool)
+    print(bool)
+end)
+
+et:Colorpicker("player esp color",Color3.fromRGB(255,255,255), function(clr)
+    print(clr)
+end)
+
+et:Label(" - world esp")
+et:Toggle("remove shadows",false, function(bool)
+    print(bool)
+end)
+
+et:Toggle("remove fog",false, function(bool)
+    print(bool)
+end)
+
+et:Toggle("boost fps",false, function(bool)
+    print(bool)
+end)
+
+et:Colorpicker("ambient color",Color3.fromRGB(255,255,255), function(clr)
+    print(clr)
+end)
+
+
+--settings tab
+st:Bind("menu keybind",Enum.KeyCode.Delete, function()
+    print("Pressed!")
+end)
+
+st:Colorpicker("menu accent",Color3.fromRGB(44, 120, 224), function(t)
+    lib:ChangePresetColor(Color3.fromRGB(t.R * 255, t.G * 255, t.B * 255))
+end)
+
+st:Button("notification", function()
+    lib:Notification("notification!!!", "hi if you read this youre gay", "i understand!")
+end)
+
+st:Textbox("write somenthing", true, function(txt)
+    lib:Notification(txt, txt, txt)
+end)
