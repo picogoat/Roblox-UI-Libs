@@ -1,0 +1,49 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jxereas/UI-Libraries/main/cerberus.lua"))()
+
+local window = Library.new("floppahook")
+
+window:LockScreenBoundaries(false)
+
+local Aimbot = window:Tab("Aimbot")
+local Visuals = window:Tab("Visuals")
+local World = window:Tab("World")
+local Local = window:Tab("Local")
+local Exploits = window:Tab("Exploits")
+local Settings = window:Tab("Settings")
+
+-- // aimbot tab
+local SilentAim = Aimbot:Section("Silent Aim")
+local SAT = SilentAim:Toggle("Enable", function(bool)
+end)
+SAT:Set(true)
+
+SilentAim:Keybind("Keybind", function()
+
+end)
+
+local SAHT = SilentAim:Dropdown("Hit Part")
+
+local SAHP = SilentAim:Dropdown("Hit Priority")
+
+SilentAim:Slider("Hitchance", function(val)
+end)
+
+SilentAim:TextBox("Whitelist Player", function(txt)
+end)
+
+SilentAim:Button("Infinite Ammo", function()
+
+end)
+
+local title = SilentAim:Title("FOV Circle")
+local FCT = SilentAim:Toggle("Enable", function(bool)
+end)
+SilentAim:ColorWheel("Color", function(color)
+
+end)
+SilentAim:Slider("Radius", function(val)
+end)
+SilentAim:Slider("Sides", function(val)
+end)
+local FCTP = SilentAim:Toggle("Outline", function(bool)
+end)
