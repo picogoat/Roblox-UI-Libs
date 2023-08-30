@@ -1,0 +1,65 @@
+local UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/cueshut/saves/main/compact"))()
+UI = UI.init("Serohaxx", "v4.2.0", "Counter Blox")
+
+-- legitbot tab
+local AimOne, AimTwo = UI:AddTab("Legitbot", "Aim Assistance")
+local SAIM = AimOne:AddSeperator("Bullet Redirection")
+local SAIMT = SAIM:AddToggle({
+    title = "Enabled",
+    callback = function(state)
+        print(state)
+    end
+})
+
+local SAIMS = SAIM:AddSlider({
+    title = "Hitchance",
+    values = {min=0,max=100,default=50},
+    callback = function(set)
+        print(set)
+    end,
+})
+
+local SAIMT = SAIM:AddToggle({
+    title = "Team Check",
+    callback = function(state)
+        print(state)
+    end
+})
+
+local bodyparts = { "Head", "Torso", "Left Arm", "Right Arm", "Left Leg", "Right Arm" }
+local SAIMP = SAIM:AddSelection({
+title = "Hit Part",
+options = bodyparts,
+callback = function(selected)
+    print("Selected the following:")
+    for _,i in pairs(selected) do print(" -", bodyparts[i]) end
+end
+})
+
+local fovToggle, fovColor
+fovToggle, fovColor = SAIM:AddToggle({
+title = "FOV Circle",
+checked = true,
+callback = function(state)
+    print(state)
+end,
+colorpicker = {
+default = Color3.new(1,1,1),
+callback = function(color)
+    print(color)
+end
+}
+})
+
+local GMS = AimTwo:AddSeperator("Gun Mods")
+GMS:AddToggle({title = "No Recoil", callback = function(bool)
+    print(bool)
+end})
+GMS:AddToggle({title = "No Spread", callback = function(bool)
+    print(bool)
+end})
+
+local Visual, Visuals = UI:AddTab("Visuals", "ESP, World, Perform...")
+local PESP = Visual:AddSeperator("Player ESP")
+
+local WESP = Visuals:AddSeperator("World ESP")
