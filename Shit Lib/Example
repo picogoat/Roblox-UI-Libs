@@ -1,0 +1,60 @@
+local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/shit-lib/src.lua"))()
+
+
+local win = lib:Create("Shithook","A Literal Baseplate")
+
+-- Tabs
+local LB = win:tab("Legitbot",true)
+local VS = win:tab("Visuals",false)
+local ST = win:tab("Settings",false)
+
+-- Legitbot tab
+LB:toggle("Enable",false,function(state)
+end)
+
+LB:input("Hitchance","value",true,function(v)
+    print(v)    
+end)
+
+LB:input("Max Distance","value",true,function(v)
+    print(v)    
+end)
+
+LB:label("- Settings -")
+
+LB:toggle("Team Check",false,function(state)
+end)
+
+LB:button("No Recoil",function()
+end)
+
+-- Visuals Tab
+VS:toggle("Enable",false,function(state)
+end)
+
+VS:toggle("Name",false,function(state)
+end)
+
+VS:toggle("Box",false,function(state)
+end)
+
+VS:toggle("Tracer",false,function(state)
+end)
+
+VS:toggle("Distance",false,function(state)
+end)
+
+VS:label("- Settings -")
+
+VS:input("Max Distance","value",true,function(v)
+    print(v)    
+end)
+
+VS:toggle("Team Check",false,function(state)
+end)
+
+
+-- Settings Tab
+ST:input("Menu Keybind","value",true,function(v)
+    print(v)    
+end)
