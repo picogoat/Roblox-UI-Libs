@@ -1,0 +1,81 @@
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/7kbpJGDf"))()
+WindowYSize=545
+WindowTheme=Color3.fromRGB(156, 94, 34)
+Window=Library:Window("cultware.cc", WindowTheme, WindowYSize)
+
+-- // Tabs
+Aimbot = Window:Tab("Aimbot")
+Visuals = Window:Tab("Visuals")
+World = Window:Tab("World")
+Local = Window:Tab("Local")
+Settings = Window:Tab("Settings")
+
+-- // Aimbot Tab
+SA = Aimbot:Section("Silent Aim")
+
+SA:Toggle("Enabled", function(state)
+    print(state)
+end)
+
+Max = 100
+Min = 1
+SA:Slider("Hitchance", Max, Min, function(val)
+    print(val)
+end)
+
+SA:Dropdown("Hit Part", {"Head", "Torso", "Pelvis", "Legs"}, function(bool)
+    print(bool)
+end)
+
+SA:Dropdown("Checks", {"Team", "Visibility", "Whitelist"}, function(bool)
+    print(bool)
+end)
+
+FC = Aimbot:Section("FOV Circle")
+
+FC:Toggle("Enabled", function(state)
+    print(state)
+end)
+
+SA:Toggle("Outline", function(state)
+    print(state)
+end)
+
+Max1 = 360
+Min1 = 0
+FC:Slider("Radius", Max1, Min1, function(val)
+    print(val)
+end)
+
+Max2 = 90
+Min2 = 1
+FC:Slider("Sides", Max2, Min2, function(val)
+    print(val)
+end)
+
+-- // Visuals Tab
+PE = Visuals:Section("Player ESP")
+
+PE:Toggle("Enabled", function(state)
+    print(state)
+end)
+
+PE:Toggle("Name ESP", function(state)
+    print(state)
+end)
+
+PE:Toggle("Box ESP", function(state)
+    print(state)
+end)
+
+PE:Toggle("Healthbar", function(state)
+    print(state)
+end)
+
+PE:Toggle("Distance", function(state)
+    print(state)
+end)
+
+PE:Toggle("Tracers", function(state)
+    print(state)
+end)
