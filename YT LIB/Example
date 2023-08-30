@@ -1,0 +1,119 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/yt-lib/src.lua"))():init("YTHaxx")
+-- Tabs
+local LT = Library:Tab("        Legitbot        ")
+local VT = Library:Tab("        Visuals        ")
+local MT = Library:Tab("        Misc        ")
+local ST = Library:Tab("        Settings        ")
+-- Legitbot Tab 
+local SAIM = LT:Section("Silent Aim")
+SAIM:Toggle("Enable", false, function(value)
+    print(value)
+end)
+
+SAIM:Keybind("Keybind", "E", function()
+    print("The keybind was presesd")
+end)
+
+SAIM:Slider("Hitchance", 0, 50, 100, function(value)
+    print(value)
+end)
+
+SAIM:Dropdown("Target Part", {"Head", "UpperTorso", "Torso", "LowerTorso"}, "", function(value)
+    print(value)
+end)
+
+SAIM:Slider("Max Distance", 0, 1000, 5000, function(value)
+    print(value)
+end)
+
+
+local FC = LT:Section("FOV Circle")
+FC:Toggle("Enable", false, function(value)
+    print(value)
+end)
+
+FC:Toggle("Outline", false, function(value)
+    print(value)
+end)
+
+FC:Slider("Radius", 0, 90, 360, function(value)
+    print(value)
+end)
+
+FC:Slider("Sides", 0, 60, 100, function(value)
+    print(value)
+end)
+
+
+-- Visuals Tab
+local PESP = VT:Section("Player ESP")
+PESP:Toggle("Enable", false, function(value)
+    print(value)
+end)
+
+PESP:Toggle("Name", false, function(value)
+    print(value)
+end)
+
+PESP:Toggle("Box", false, function(value)
+    print(value)
+end)
+
+PESP:Toggle("Healthbar", false, function(value)
+    print(value)
+end)
+
+PESP:Toggle("Distance", false, function(value)
+    print(value)
+end)
+
+PESP:Toggle("Tracers", false, function(value)
+    print(value)
+end)
+
+local SESP = VT:Section("ESP Settings")
+SESP:Slider("Max Distance", 0, 1000, 10000, function(value)
+    print(value)
+end)
+
+SESP:Toggle("Team Check", false, function(value)
+    print(value)
+end)
+
+SESP:Toggle("Visible Check", false, function(value)
+    print(value)
+end)
+
+SESP:Toggle("Rainbow Mode", false, function(value)
+    print(value)
+end)
+
+-- Misc Tab
+local LP = MT:Section("Local Player")
+LP:Toggle("Walkspeed", false, function(state)
+end)
+LP:Slider("Speed", 0, 17, 500, function(value)
+    print(value)
+end)
+
+LP:Toggle("Jumppower", false, function(state)
+end)
+LP:Slider("Amount", 0, 100, 500, function(value)
+    print(value)
+end)
+
+local WE = MT:Section("World")
+WE:Toggle("Remove Shadows", false, function(state)
+end)
+
+WE:Toggle("Remove Fog", false, function(state)
+end)
+
+WE:Toggle("Rainbow Ambient", false, function(state)
+end)
+
+
+-- Settings Tab
+local MS = ST:Section("Menu Settings")
+MS:Keybind("Menu Keybind", "Delete", function()
+end)
